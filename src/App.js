@@ -63,6 +63,19 @@ function App() {
     console.log(itemCopy)
 
   }
+
+  const removeTask = (data, key, taskId) => {
+    console.log(taskId)
+    console.log(data)
+    console.log(key)
+
+    /*
+    setState(prev => {
+      if prev.d
+    })
+    */
+  
+  }
   
   const addItem = () => {
     setState(prev => {
@@ -118,7 +131,8 @@ function App() {
                                   {...provided.dragHandleProps}
                                   
                                 >
-                                  {el.name}
+                                  <div>{el.name}</div>
+                                  <div onClick={() => removeTask(data, key, el.id)}><img src="/assets/images/closeIcon.png" width="10px"/></div>
                                 </div>
                               )
                             }}

@@ -23,4 +23,7 @@
   border: 1px solid white;
   padding: 5px;
   border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
